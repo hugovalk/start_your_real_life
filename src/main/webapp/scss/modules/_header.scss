@@ -1,6 +1,11 @@
 header{
+	position: relative;
 	background-color: $blue;
 	padding: 20px 0 50px;
+	
+	    box-shadow: 0 4px 4px -2px #232323;
+    -moz-box-shadow: 0 4px 4px -2px #232323;
+    -webkit-box-shadow: 0 4px 4px -2px #232323;
 }
 
 header.carousel {
@@ -28,6 +33,17 @@ header.carousel .fill {
     }
 } 
 
-.arrow-down{
-	@include arrow-down($white);
+header:after{
+	content:'';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    width: 0;
+    height: 0;
+    border-top: solid 50px $blue;
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;	
+    
+
 }
