@@ -1,1 +1,9 @@
-<p>Hello</p>
+<h1>Data import tools</h1>
+
+<section>
+	<h2>Postcodes importeren</h1>
+	<form enctype="multipart/form-data" method="post">
+		<input type="file" name="postcodeFile"></input>
+		<input type="submit" name="importeren" value="importeren"></input>
+	</form>
+</section>
