@@ -1,13 +1,53 @@
 /**
 ** This is the mian file of sass. For editing: Install sass and run the following command: 
 **
-** sass --watch C:\Repos\start_your_real_life\src\main\webapp\scss\_style.scss:C:\Repos\start_your_real_life\src\main\webapp\css\style.css 
+** sass --watch C:\Repos\start_your_real_life\src\main\webapp\scss\_style.scss:C:\Repos\start_your_real_life\src\main\webapp\css\style.css --style compressed 
 **/
 
 /** Variables that can be used trough the complete styling of the project. **/
 @import 'variables/colors';
 
-/** Main Paige Layout. **/
-@import 'layout';
+/** To refactor: **/
+@import 'defaults/randstad-bootstrap';
+@import 'defaults/randstad';
 
-/** Components/Modules styling. **/
+/** Main Paige Layout. **/
+@import 'layout/containers';
+@import 'layout/rows';
+@import 'layout/columns';
+
+/** Defaults for Randstad. **/
+@import 'defaults/fonts';
+@import 'defaults/display-defaults';
+@import 'defaults/text-defaults';
+@import 'defaults/title-defaults';
+@import 'defaults/print';
+@import 'defaults/layout';
+@import 'defaults/effects';
+
+/** Generic Modules. **/
+@import 'modules/glyphicon';
+@import 'modules/codesamples';
+@import 'modules/links';
+@import 'modules/messages';
+@import 'modules/table';
+@import 'modules/forms';
+@import 'modules/images';
+@import 'modules/thumbnails';
+@import 'modules/carousel';
+@import 'modules/lists';
+@import 'modules/blockquote';
+@import 'modules/dropdown-menu';
+@import 'modules/modal';
+@import 'modules/navigation';
+@import 'modules/tabs';
+@import 'modules/breadcrumb';
+@import 'modules/pagination';
+@import 'modules/alert';
+@import 'modules/progressbar';
+@import 'modules/intro';
+
+
+/** Specific Modules. **/
+@import 'modules/header';
+
