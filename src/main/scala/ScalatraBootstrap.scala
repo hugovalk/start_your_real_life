@@ -8,5 +8,6 @@ class ScalatraBootstrap extends LifeCycle {
   override def init(context: ServletContext) {
     context.mount(new VacaturesServlet(new MockVacaturesRepository), "/services/vacatures")
     context.mount(new HuizenServlet(new MockHuizenRepository), "/services/huizen")
+    context.mount(new ImportServlet, "/data/import")
   }
 }
