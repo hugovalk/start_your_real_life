@@ -1,9 +1,21 @@
 .intro{
+	
 	display: block; 
 	margin: 0 auto; 
-	border: 1px solid white
+
+	.logo{
+		background-image: url("/img/logo.png"); 
+		background-repeat: no-repeat; 
+		background-position: 50% 50%;	
+		height: 231px; 
+		background-size:contain;
+		background-position:center;
+	}
+	
+	
 }
 
 .intro h1{
-	color: $white;	
+	color: $white;
+	text-align: center;
 }
