@@ -11,6 +11,11 @@ strong {
   font-weight: bold;
 }
 
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
 
 mark {
   color: #000;
@@ -31,4 +36,49 @@ sup {
 }
 sub {
   bottom: -.25em;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.42857143;
+}
+
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .lead {
+    font-size: 21px;
+  }
+}
+small,
+.small {
+  font-size: 85%;
+}
+mark,
+.mark {
+  padding: .2em;
+  background-color: #fcf8e3;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #777;
+}
+
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #777;
+  text-align: left;
 }

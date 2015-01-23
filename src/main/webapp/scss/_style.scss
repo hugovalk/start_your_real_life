@@ -4,6 +4,9 @@
 ** sass --watch C:\Repos\start_your_real_life\src\main\webapp\scss\_style.scss:C:\Repos\start_your_real_life\src\main\webapp\css\style.css --style compressed 
 **/
 
+
+
+
 /** Variables that can be used trough the complete styling of the project. **/
 @import 'variables/colors';
 
@@ -11,15 +14,19 @@
 @import 'defaults/randstad-bootstrap';
 @import 'defaults/randstad';
 
+/** Main Paige Layout. **/
+@import 'layout/containers';
+@import 'layout/rows';
+@import 'layout/columns';
+
 /** Defaults for Randstad. **/
 @import 'defaults/fonts';
 @import 'defaults/display-defaults';
 @import 'defaults/text-defaults';
 @import 'defaults/title-defaults';
-
-/** Main Paige Layout. **/
 @import 'defaults/print';
 @import 'defaults/layout';
+@import 'defaults/effects';
 
 /** Generic Modules. **/
 @import 'modules/glyphicon';
@@ -28,7 +35,14 @@
 @import 'modules/messages';
 @import 'modules/table';
 @import 'modules/forms';
-@import 'defaults/images';
+@import 'modules/images';
+@import 'modules/thumbnails';
+@import 'modules/carousel';
+@import 'modules/lists';
+@import 'modules/blockquote';
+@import 'modules/dropdown-menu';
+@import 'modules/modal';
 
 /** Specific Modules. **/
 @import 'modules/header';
+
