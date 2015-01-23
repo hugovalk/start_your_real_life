@@ -1,6 +1,6 @@
 package nl.ibridge.syrl.repositories
 
-import nl.ibridge.syrl.model.Vacature
+import nl.ibridge.syrl.model.vacature.Vacature
 
 trait VacaturesRepository {
   

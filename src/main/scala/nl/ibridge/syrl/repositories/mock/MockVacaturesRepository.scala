@@ -1,7 +1,7 @@
 package nl.ibridge.syrl.repositories.mock
 
 import nl.ibridge.syrl.repositories.VacaturesRepository
-import nl.ibridge.syrl.model.Vacature
+import nl.ibridge.syrl.model.vacature.Vacature
 
 /**
  * @author hv01016

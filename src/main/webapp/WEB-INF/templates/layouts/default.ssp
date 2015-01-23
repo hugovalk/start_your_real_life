@@ -1,0 +1,9 @@
+<%@ val body: String %>
+  <html>
+    <head>
+    	<title>Data import tools</title>
+    </head>
+    <body>
+      ${unescape(body)}
+    </body>
+  </html>
