@@ -1,5 +1,11 @@
+header{
+	background-color: $blue;
+	height: 200px;
+}
+
 header.carousel {
     height: 50%;
+    border: 1px solid black;
 }
 
 header.carousel .item,

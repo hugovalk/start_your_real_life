@@ -4,7 +4,6 @@
 ** sass --watch C:\Repos\start_your_real_life\src\main\webapp\scss\_style.scss:C:\Repos\start_your_real_life\src\main\webapp\css\style.css --style compressed 
 **/
 
-
 /** Variables that can be used trough the complete styling of the project. **/
 @import 'variables/colors';
 
@@ -46,9 +45,9 @@
 @import 'modules/pagination';
 @import 'modules/alert';
 @import 'modules/progressbar';
+@import 'modules/intro';
 
 
 /** Specific Modules. **/
 @import 'modules/header';
-
 
