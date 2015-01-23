@@ -1,6 +1,6 @@
 header{
 	background-color: $blue;
-	height: 200px;
+	padding: 20px 0 50px;
 }
 
 header.carousel {
@@ -27,3 +27,7 @@ header.carousel .fill {
         height: 70%;
     }
 } 
+
+.arrow-down{
+	@include arrow-down($white);
+}

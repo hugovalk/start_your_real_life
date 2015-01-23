@@ -7,6 +7,10 @@
 /** Variables that can be used trough the complete styling of the project. **/
 @import 'variables/colors';
 
+/** mixins **/
+@import 'mixins/arrows';
+
+
 /** To refactor: **/
 @import 'defaults/randstad-bootstrap';
 @import 'defaults/randstad';
@@ -46,6 +50,8 @@
 @import 'modules/alert';
 @import 'modules/progressbar';
 @import 'modules/intro';
+
+
 
 
 /** Specific Modules. **/
