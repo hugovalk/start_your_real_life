@@ -1,6 +1,6 @@
 package nl.ibridge.syrl.app
 
-import nl.ibridge.syrl.model.Vacature
+import nl.ibridge.syrl.model.vacature.Vacature
 import nl.ibridge.syrl.repositories.VacaturesRepository
 
 /**

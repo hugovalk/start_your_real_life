@@ -1,7 +1,7 @@
 package nl.ibridge.syrl.repositories.mock
 
 import nl.ibridge.syrl.CustomFlatSpec
-import nl.ibridge.syrl.model.Vacature
+import nl.ibridge.syrl.model.vacature.Vacature
 
 /**
  * @author hv01016
@@ -13,7 +13,7 @@ class MockVacaturesRepositorySpecs extends CustomFlatSpec {
   }
   
   it should "be able to return vacature 1" in {
-    new MockVacaturesRepository().get(1) should be(Some(Vacature(1)))
+    new MockVacaturesRepository().get(1).get.id should be(1)
   }
   
 }
