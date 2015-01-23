@@ -5,8 +5,6 @@
 **/
 
 
-
-
 /** Variables that can be used trough the complete styling of the project. **/
 @import 'variables/colors';
 
@@ -42,7 +40,15 @@
 @import 'modules/blockquote';
 @import 'modules/dropdown-menu';
 @import 'modules/modal';
+@import 'modules/navigation';
+@import 'modules/tabs';
+@import 'modules/breadcrumb';
+@import 'modules/pagination';
+@import 'modules/alert';
+@import 'modules/progressbar';
+
 
 /** Specific Modules. **/
 @import 'modules/header';
+
 
