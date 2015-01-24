@@ -39,7 +39,7 @@
 	    <div class="container-full">
 	    	
 	    	<div class="row content-row step grey">
-				<h2 class="blue">Waar is jouw kennis populair?</h2>	    		
+				<h2 class="blue">Tijd om je kansen te ontdekken!</h2>	    		
 	    		<div class="col-md-1 visible-lg" >
 	    			
 	    		</div>
@@ -103,13 +103,13 @@
 					    			</select>	
 				    			</div>
 				    			<div class="col-sm-5">
-									<select name="opleidingsniveau" class="selectpicker">
+									<select name="opleidingsNiveau" class="selectpicker">
 										<option value="">selecteer een opleidingsniveau</option>
-					    				<option value="1:Basisonderwijs">Basisonderwijs</option>
-        								<option value="2:LBO, MAVO, VMBO">LBO, MAVO, VMBO</option>
-        								<option value="3:MBO, HAVO, VWO">MBO, HAVO, VWO</option>
-        								<option value="4:HBO">HBO</option>
-        								<option value="5:WO">WO</option>
+					    				<option value="Basisonderwijs">Basisonderwijs</option>
+        								<option value="LBO, MAVO, VMBO">LBO, MAVO, VMBO</option>
+        								<option value="MBO, HAVO, VWO">MBO, HAVO, VWO</option>
+        								<option value="HBO">HBO</option>
+        								<option value="WO">WO</option>
 					    			</select>					    				
 				    			</div>
 				    			<div style="clear:both"></div>
@@ -117,7 +117,7 @@
 						    
 						    <div class="form-group">
 	    						<div class="col-sm-5">
-	    							<label for="provincie">In welke provincie woon je nu?</label>
+	    							<label for="provincie">Welke provincie heeft je voorkeur?</label>
 	    						</div>
 	    						<div class="col-sm-7">
 	    							<select id="provincie" name="provincie" class="selectpicker">
@@ -165,7 +165,7 @@
 	    					<p class="dark-grey">
 	    						jouw beste kansen liggen in ... <br/>
 	    						<a href="http://www.randstad.nl/vacatures?zoekterm=&locatie=Alkmaar&afstand=10" target="_blank">
-	    							<h2 class="blue result">Alkmaar</h2>
+	    							<h2 data-advice-city class="blue result">Alkmaar</h2>
 	    						</a>
 	    					</p>
 	    				</div>
@@ -176,9 +176,9 @@
 	    							<h4 class="vacature">Passende vacature</h4>
 	    							<img class="result-icon" alt="randstad vacature" src="/img/randstad-white.png"/>
 	    							<div class="result-content">
-		    							<span class="title">Callcentermedewerker inbound</span>
-		    							<span class="summary">Wil jij graag snel aan de slag en ben jij op zoek naar een bijbaan voor 10 uur in de week? Wil jij daarbij ook goed verdienen en werken voor topwerkgever KPN?  ...</span>
-		    							<a alt="bekijk vacature" target="_blank" href="http://www.randstad.nl/vacatures/1641637/callcentermedewerker-inbound" class="result-option">
+		    							<span data-vacature-title class="title">Callcentermedewerker inbound</span>
+		    							<span data-vacature-summary class="summary">Wil jij graag snel aan de slag en ben jij op zoek naar een bijbaan voor 10 uur in de week? Wil jij daarbij ook goed verdienen en werken voor topwerkgever KPN?  ...</span>
+		    							<a data-vacature-link alt="bekijk vacature" target="_blank" href="http://www.randstad.nl/vacatures/1641637/callcentermedewerker-inbound" class="result-option">
 	    									Bekijk vacature
 	    								</a>
 	    							</div>
@@ -186,17 +186,17 @@
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="result-block woning-result">
-	    							<h4 class="woning">Passende koopwoning</h4>	    						
+	    							<h4 data-huis-optiontitle class="woning">Passende koopwoning</h4>	    						
 	    							<img class="result-icon" alt="funda huisaanbod" src="/img/funda-white.png"/>
 	    							<div class="result-content">
-	    								<span class="title">Johannes Poststraat 94, Gouda</span>
-	    								<span class="summary">Koophuis</span>
+	    								<span data-huis-title class="title">Johannes Poststraat 94, Gouda</span>
+	    								<span data-huis-summary class="summary">Koophuis</span>
 	    								<a alt="bekijk op funda" target="_blank"  href="http://www.funda.nl/koop/gouda/appartement-48281849-johannes-poststraat-49/" class="result-option">
 	    									Bekijk op funda.nl.
 	    								</a>
 	    								
 	    							</div>
-	    							<img class="result-icon-type" alt="koopwoning funda" src="/img/buy.png"/>
+	    							<img data-huis-typeicon class="result-icon-type" alt="koopwoning funda" src="/img/buy.png"/>
 	    						</div>
 	    					</div>
 	    					<div style="clear: both;"></div>
