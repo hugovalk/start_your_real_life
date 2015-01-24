@@ -6,7 +6,7 @@
 		
 		//hide the [data-results]-div. 
 		$(this).find("[data-results]").each(function(){
-			$(this).hide(); 
+//			$(this).hide(); 
 		});
 		
 		$(this).find("[data-match]").each(function(){
@@ -17,10 +17,9 @@
 				//2. Render results
 				
 				//3. Show the results div via fade in.
-				$document.find("[data-results]").toggle("fold");
+				$document.find("[data-results]").toggle("fold",  {horizFirst: false });
 			});
 		});
 	});
-	
 	
 }(jQuery));
