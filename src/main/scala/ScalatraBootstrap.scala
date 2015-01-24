@@ -11,6 +11,7 @@ import org.elasticsearch.node.Node
 import java.net.InetAddress
 import java.net.UnknownHostException
 import com.sksamuel.elastic4s.ElasticClient
+import nl.ibridge.syrl.repositories.mock.MockVacaturesRepository
 
 
 class ScalatraBootstrap extends LifeCycle {
@@ -36,8 +37,8 @@ class ScalatraBootstrap extends LifeCycle {
     val postcodeRepository = new ESPostcodeRepository(client)
     val vacaturesRepository = new ESVacaturesRepository(client)
     val huizenRepository = new ESHuizenRepository(client)
-    context.mount(new VacaturesServlet(vacaturesRepository), "/services/vacatures")
-    context.mount(new HuizenServlet(huizenRepository), "/services/huizen")
+    context.mount(new VacaturesServlet(new MockVacaturesRepository), "/services/vacatures")
+    context.mount(new HuizenServlet(new MockHuizenRepository), "/services/huizen")
     context.mount(new ImportServlet(postcodeRepository, vacaturesRepository, huizenRepository), "/data/import")
   }
   
