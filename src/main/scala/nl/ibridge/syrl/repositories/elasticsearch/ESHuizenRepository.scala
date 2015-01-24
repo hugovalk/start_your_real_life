@@ -28,11 +28,11 @@ class ESHuizenRepository(val client: ElasticClient) extends HuizenRepository wit
   }.map { response => 
     response.getHits.getHits.map { 
       hit => 
-        new Huis(1, Koop, new Adres("","",""))
+        new Huis(1, Koop, "200.000 k.k.", 4, "Omschrijving", new Adres("","",""))
     }.toList
   }
   
-  def get(id: Int): Future[Option[Huis]] = Future(Some(new Huis(1, Koop, new Adres("","",""))))
+  def get(id: Int): Future[Option[Huis]] = Future(Some(new Huis(1, Koop, "200.000 k.k.", 4, "Omschrijving", new Adres("","",""))))
   
   val indexName = "huizen"
   

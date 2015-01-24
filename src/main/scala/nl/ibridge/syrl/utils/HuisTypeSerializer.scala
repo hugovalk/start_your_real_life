@@ -13,13 +13,13 @@ import nl.ibridge.syrl.model.huis.Huur
 class HuisTypeSerializer extends CustomSerializer[HuisType](
     format => ({
       case v: JString => v.toString match {
-        case "koop" => Koop
-        case "huur" => Huur
+        case "koopwoning" => Koop
+        case "huurwoning" => Huur
       }
     }, {
       case ht: HuisType => ht match {
-        case Koop => JString("koop")
-        case Huur => JString("huur")
+        case Koop => JString("koopwoning")
+        case Huur => JString("huurwoning")
       }
     })
     ){}
