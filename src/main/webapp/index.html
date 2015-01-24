@@ -39,7 +39,7 @@
 	    <div class="container-full">
 	    	
 	    	<div class="row content-row step grey">
-				<h2 class="blue">Wonen en werken na je studie</h2>	    		
+				<h2 class="blue">Waar is jou kennis populair?</h2>	    		
 	    		<div class="col-md-1 visible-lg" >
 	    			
 	    		</div>
@@ -48,17 +48,13 @@
 
 	    		
 	    			<p class="dark-grey">
-	    				Ben je net klaar met je studie en wil je nu je gewenste leven gaan 
-	    				beginnen? Wij helpen je om een gepaste woning, met een gepaste baan 
-	    				te vinden! 
-	    				
-	    				Ben je net klaar met je studie en wil je nu je gewenste leven gaan 
-	    				beginnen? Wij helpen je om een gepaste woning, met een gepaste baan 
-	    				te vinden! 
-	    				
-	    				Ben je net klaar met je studie en wil je nu je gewenste leven gaan 
-	    				beginnen? Wij helpen je om een gepaste woning, met een gepaste baan 
-	    				te vinden! 
+	    				Na al de lange nachten studeren ben je dan eindelijk afgestudeerd! Gefeliciteerd! Nu is dan toch
+	    				eindelijk het moment daar waarop je op jezelf kunt gaan wonen en het brood op de plank kan krijgen. Maar waar
+	    				zijn jou kansen van slagen precies het grootst? 
+	    				<br/><br/>
+	    				Op deze site kun je snel en gemakkelijk bekijken waar je de beste kans hebt op werk dat bij jou past, in combinatie
+	    				met een leuke en betaalbaare woning. Door ons wat te vertellen over je studie, kunnen wij jou helpen 
+	    				om deze keuze te maken. 
 	    			</p>
 	    		</div>
 	    		
@@ -67,7 +63,7 @@
 	    		</div>
 				<div style="clear:both"></div>
 				
-				<div class="row-fluid">
+				<!-- <div class="row-fluid">
 					<div class="col-md-5"></div>
 					<div class="col-md-2">
 						<br/>
@@ -75,13 +71,13 @@
 					</div>
 					<div class="col-md-5"></div>
 					<div style="clear:both"></div>
-				</div>
+				</div> -->
 	    	</div>
 	    	
 	    	<div class="row content-row step white">    		
 	    			<form method="post" role="form">
 						<div class="col-md-1 col-centered visible-lg">
-							<img  class="responsive-image" src="/img/step-one.png" alt="stap 1"/>
+							<img  class="responsive-image" src="/img/step-input.png" alt="stap 1"/>
 						</div>    	
 						<div class="col-md-2 col-centered"> </div>   		
 	    				<div class="col-md-6 col-centered dark-grey">
@@ -160,7 +156,7 @@
 					<div class="col-md-5"></div>
 					<div class="col-md-2">
 						<br/>
-						<button class="flowbutton">Toon opties</button>
+						<button class="flowbutton" data-match>Toon opties</button>
 					</div>
 					<div class="col-md-5"></div>
 					<div style="clear:both"></div>
@@ -168,39 +164,40 @@
 	    	</div>
 	    	
 	    	
-	    	<div class="row content-row step grey">
+	    	<div class="row content-row step grey" data-results>
 	    		
 	    		<div class="row-fluid">
 	    			<div class="col-md-1 col-centered visible-lg">
-	    				<img  class="responsive-image" src="/img/step-two.png" alt="stap 2"/>
+	    				<img  class="responsive-image" src="/img/step-results.png" alt="stap 2"/>
 	    			</div>
 	    			<div class="col-md-10 col-centered">
-	    				<h2 class="blue">Onze suggesties voor je toekomst</h2>	
-	    				<p class="dark-grey">
-	    					Op basis van je informatie hebben we voor je gezocht naar de beste
-	    					woon-werk combinatie. Bekijk en zoek hieronder waar voor jou het meeste werk is en
-	    					bekijk direct het huizen-aanbod!
-	    				</p>
+	    				<div class="location-result">
+	    					<p class="dark-grey">
+	    						jou beste kansen liggen in ... <br/>
+	    						<a href="http://www.randstad.nl/vacatures?zoekterm=&locatie=Alkmaar&afstand=10" target="_blank">
+	    							<h2 class="blue result">Alkmaar</h2>
+	    						</a>
+	    					</p>
+	    				</div>
+	    				<!--  Vacature And Woning Result -->
+	    				<div class="row-fluid">
+	    					<div class="col-md-6">
+	    						<div class="result-block vacature-result">
+	    							<h4 class="vacature">Passende vacature</h4>
+	    						</div>
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="result-block woning-result">
+	    							<h4 class="woning">Passende woning</h4>	    						
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div style="clear: boht;"></div>
 	    			</div>
 	    			<div class="col-md-1 col-centered"></div>
 	    			<div style="clear:both"></div>	
 	    			<br/><br/><br/>
 	    		</div>
-	    		
-	    		
-	    		
-	    		<div class="col-md-1 col-centered">
-	    		
-				</div>    	
-				<div class="col-md-4 col-centered" style="border: 10px solid black; height: 20px"> 
-					
-				</div>
-				<div class="col-md-2 col-centered"> </div>    	
-				<div class="col-md-4 col-centered" style="border: 10px solid black; height: 20px">
-
-				</div>
-	    		<div class="col-md-1 col-centered"> </div>   
-	    		<div style="clear:both"></div>	
 
 	    	</div>
 	
@@ -219,8 +216,10 @@
 	    
 	    
 	
-	    <!-- jQuery -->
+	    <!-- jQuery and plugins -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	    <script src="/js/jquery-ui.min.js"></script>
+	    <script src="/js/jquery.randstad.js"></script>
 	
 	    <!-- Bootstrap Core JavaScript --> 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
