@@ -3,9 +3,10 @@ header{
 	background-color: $blue;
 	padding: 20px 0 50px;
 	
-	    box-shadow: 0 4px 4px -2px #232323;
-    -moz-box-shadow: 0 4px 4px -2px #232323;
-    -webkit-box-shadow: 0 4px 4px -2px #232323;
+    
+        -webkit-box-shadow: 0px 2px 4px #000000;
+       -moz-box-shadow: 0px 2px 4px #000000;
+            box-shadow: 0px 2px 4px #000000;
 }
 
 header.carousel {
@@ -45,4 +46,9 @@ header:after{
     border-top: solid 50px $blue;
     border-left: solid 50px transparent;
     border-right: solid 50px transparent;	
+}
+
+img.responsive-image{
+	width: 100%; 
+	height: auto;
 }

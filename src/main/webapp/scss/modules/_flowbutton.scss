@@ -1,0 +1,14 @@
+.flowbutton{
+	width: 100%; 
+	color: $white;
+	background: $blue;
+	padding: 10px 10px;
+	font-size: 1.3em;
+	font-weight: bold;
+	border: 1px solid $blue;
+}
+
+.flowbutton:hover{
+	background-color: $white; 
+	color: $blue; 
+}
