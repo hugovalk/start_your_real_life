@@ -8,5 +8,7 @@ trait VacaturesRepository {
   def find: Future[List[Vacature]]
   
   def get(id: Int): Future[Option[Vacature]]
+  
+  def save(postcode: Vacature): Future[Boolean]
 
 }

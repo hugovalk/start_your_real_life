@@ -9,13 +9,15 @@ import nl.ibridge.syrl.repositories.elasticsearch.ElasticSearch
 import nl.ibridge.syrl.repositories.elasticsearch.ElasticSearch
 import nl.ibridge.syrl.repositories.HuizenRepository
 import nl.ibridge.syrl.repositories.VacaturesRepository
+import nl.ibridge.syrl.repositories.elasticsearch.ESVacaturesRepository
+import nl.ibridge.syrl.repositories.elasticsearch.VacaturesIndexer
 
 /**
  * @author hv01016
  */
 class ImportServlet(
     val postcodeRepository: PostcodeRepository with ElasticSearch,
-    val vacatureRepository: VacaturesRepository with ElasticSearch,
+    val vacatureRepository: ESVacaturesRepository,
     val huizenRepository: HuizenRepository with ElasticSearch) extends StartYourRealLifeStack 
     with FileUploadSupport with UrlGeneratorSupport {
   
@@ -44,6 +46,11 @@ class ImportServlet(
   
   get("/vacatures/deleteindex") {
     vacatureRepository.deleteIndex()
+    redirect(url(getPage))
+  }
+  
+  get("/vacatures/indexall") {
+    new VacaturesIndexer(vacatureRepository, postcodeRepository).index
     redirect(url(getPage))
   }
   

@@ -12,6 +12,15 @@ import scala.concurrent.ExecutionContext.Implicits.global
  */
 class MockVacaturesRepository extends VacaturesRepository {
   
+  var repo: List[Vacature] = List()
+  
+  override def save(vacature: Vacature): Future[Boolean] = {
+    Future{
+      repo = vacature :: repo
+      true 
+    }
+  }
+  
   override def find: Future[List[Vacature]] = Future {
     List(
       new Vacature(1, 

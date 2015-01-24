@@ -41,9 +41,12 @@ class ESPostcodeRepository(val client: ElasticClient) extends PostcodeRepository
 //      }
 //    }
   }.map{response => 
-    val hit = response.getHits.getAt(0)
-    val field = hit.field("provincie")
-    field.getValue.toString()
+    val hits = response.getHits
+    if (hits.getTotalHits > 0) {
+      val hit = response.getHits.getAt(0)
+      val field = hit.field("provincie")
+      field.getValue.toString()
+    } else ""
   }
   
   override def findProvincies: Future[List[String]] = client.execute {

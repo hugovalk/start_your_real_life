@@ -17,7 +17,7 @@ import nl.ibridge.syrl.model.vacature.Vacature
 class ESVacaturesRepository(val client: ElasticClient) extends VacaturesRepository with ElasticSearch {
   
   def save(vacature: Vacature): Future[Boolean] = client.execute {
-    index into indexName doc vacature
+    index into indexName doc vacature id vacature.id
   }.map(_.isCreated())
   
   def find: Future[List[Vacature]] = client.execute {

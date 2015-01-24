@@ -12,8 +12,9 @@
 
 <section>
 	<h2>Vacatures importeren</h1>
-	<a href="/data/import/vacatures/createindex">Create vacatures index</a>
-	<a href="/data/import/vacatures/deleteindex">Delete vacatures index</a>
+	<a style="display: block;" href="/data/import/vacatures/createindex">Create vacatures index</a>
+	<a style="display: block;" href="/data/import/vacatures/deleteindex">Delete vacatures index</a>
+	<a style="display: block;" href="/data/import/vacatures/indexall">Indexeer alle vacatures</a>
 
 </section>
 
