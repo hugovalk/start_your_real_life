@@ -34,9 +34,17 @@
 				});	
 				
 				//3. Show the results div via fade in.
-				$document.find("[data-results]").toggle("fold",  {horizFirst: false });				
+				if($(document).find("[data-results").is(":hidden")){
+					$document.find("[data-results]").toggle("fold",  {horizFirst: false });									
+				}
+				
 				//delay force.
 				setTimeout( function() { $("body").waitMe('hide');  }, 500);
+				
+				//animate to the results
+				 $('html, body').animate({
+				        scrollTop: $("#results-location").offset().top
+				 }, 2000);
 			});
 		});
 	});
