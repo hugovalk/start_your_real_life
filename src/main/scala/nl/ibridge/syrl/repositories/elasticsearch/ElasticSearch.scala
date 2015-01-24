@@ -20,7 +20,10 @@ trait ElasticSearch {
   
   def createIndex(): Future[Boolean] = client.execute {
     create index indexName mappings {mapping}
-  }.map(_.isAcknowledged())
+  }.map{response => 
+    println(response)
+    response.isAcknowledged()
+  }
   
   def deleteIndex(): Future[Boolean] = client.execute {
     delete index (indexName)

@@ -29,21 +29,27 @@ class MockVacaturesRepository extends VacaturesRepository {
           "Administratief",
           "Zuid-Holland",
           "Gouda",
-          2300),
+          2300,
+          "Q Logic",
+          "MBO,HAVO"),
       new Vacature(2, 
           "Social media adviseur", 
           "Is social media jouw passie? Wij zoeken een...",
           "Marketing & Communicatie",
           "Noord-Holland",
           "Diemen",
-          2300),
+          2300,
+          "Randstad",
+          "MBO,HAVO"),
       new Vacature(3, 
           "Winkelverkoper", 
           "Voor boekhandel LekkerLezen zoeken wij een enthousiaste verkoper...",
           "Overig",
           "Zeeland",
           "Middelburg",
-          2300))
+          2300,
+          "Boekhandel LekkerLezen",
+          "MBO,HAVO"))
   }
       
   override def get(id: Int): Future[Option[Vacature]] = find.map(_.find(_.id == id))

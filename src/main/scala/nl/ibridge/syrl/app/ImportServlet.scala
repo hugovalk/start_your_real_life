@@ -20,7 +20,7 @@ class ImportServlet(
     val vacatureRepository: ESVacaturesRepository,
     val huizenRepository: HuizenRepository with ElasticSearch) extends StartYourRealLifeStack 
     with FileUploadSupport with UrlGeneratorSupport {
-  
+   
   before() {
     contentType = "text/html"
   }

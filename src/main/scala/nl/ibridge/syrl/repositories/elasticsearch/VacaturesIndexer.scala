@@ -33,7 +33,9 @@ class VacaturesIndexer(vacaturesRepository: ESVacaturesRepository, postcodeRepos
               case None => ""
             },
             (node \ "location").text,
-            salaryFrom
+            salaryFrom,
+            (node \ "companyName").text,
+            (node \ "education").head.text
             )
         vacaturesRepository.save(vacature)
       }

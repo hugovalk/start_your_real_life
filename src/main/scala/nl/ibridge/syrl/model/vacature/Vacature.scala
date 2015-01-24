@@ -7,4 +7,6 @@ case class Vacature (
     val vakgebied: String,
     val provincie: String,
     val plaats: String,
-    val salaris: Int)
+    val salaris: Int,
+    val bedrijf: String,
+    val opleidingsNiveau: String)
