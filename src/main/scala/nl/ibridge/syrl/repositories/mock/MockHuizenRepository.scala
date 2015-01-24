@@ -18,5 +18,5 @@ class MockHuizenRepository extends HuizenRepository {
       )
   }
   
-  def get(id: Int): Future[Option[Huis]] = find.map(_.find(_.id == id))
+  override def get(id: Int): Future[Option[Huis]] = find.map(_.find(_.id == id))
 }

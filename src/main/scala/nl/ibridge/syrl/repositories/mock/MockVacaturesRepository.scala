@@ -14,9 +14,27 @@ class MockVacaturesRepository extends VacaturesRepository {
   
   override def find: Future[List[Vacature]] = Future {
     List(
-      new Vacature(1, "Software developer", "Wij zoeken een ervaren software developer... "),
-      new Vacature(2, "Social media adviseur", "Is social media jouw passie? Wij zoeken een..."),
-      new Vacature(3, "Winkelverkoper", "Voor boekhandel LekkerLezen zoeken wij een enthousiaste verkoper..."))
+      new Vacature(1, 
+          "Software developer", 
+          "Wij zoeken een ervaren software developer... ",
+          "Administratief",
+          "Zuid-Holland",
+          "Gouda",
+          2300),
+      new Vacature(2, 
+          "Social media adviseur", 
+          "Is social media jouw passie? Wij zoeken een...",
+          "Marketing & Communicatie",
+          "Noord-Holland",
+          "Diemen",
+          2300),
+      new Vacature(3, 
+          "Winkelverkoper", 
+          "Voor boekhandel LekkerLezen zoeken wij een enthousiaste verkoper...",
+          "Overig",
+          "Zeeland",
+          "Middelburg",
+          2300))
   }
       
   override def get(id: Int): Future[Option[Vacature]] = find.map(_.find(_.id == id))

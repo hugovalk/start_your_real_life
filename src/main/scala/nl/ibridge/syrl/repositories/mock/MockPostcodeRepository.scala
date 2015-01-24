@@ -22,7 +22,7 @@ class MockPostcodeRepository extends PostcodeRepository {
   
   override def find: Future[List[Postcode]] = Future{repo}
   
-  def findProvincieForPostcode(postcode: String): Future[String] = 
+  override def findProvincieForPostcode(postcode: String): Future[String] = 
     findProvincies().map(Random.shuffle(_).head)
   
   override def findProvincies: Future[List[String]] = Future(List(

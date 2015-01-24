@@ -25,11 +25,11 @@ class ESVacaturesRepository(val client: ElasticClient) extends VacaturesReposito
   }.map { response => 
     response.getHits.getHits.map { 
       hit => 
-        new Vacature(1, "", "")
+        new Vacature(1, "", "", "", "", "", 1)
     }.toList
   }
  
-  def get(id: Int): Future[Option[Vacature]] = Future(Some(new Vacature(1, "", "")))
+  def get(id: Int): Future[Option[Vacature]] = Future(Some(new Vacature(1, "", "", "", "", "", 1)))
   
   val indexName = "vacatures"
   
