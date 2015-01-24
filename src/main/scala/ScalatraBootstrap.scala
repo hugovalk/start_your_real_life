@@ -41,6 +41,7 @@ class ScalatraBootstrap extends LifeCycle {
     context.mount(new HuizenServlet(new MockHuizenRepository), "/services/huizen")
     context.mount(new ImportServlet(postcodeRepository, vacaturesRepository, huizenRepository), "/data/import")
     context.mount(new GeoDataServlet(postcodeRepository), "/services/geodata")
+    context.mount(new AdviezenServlet(vacaturesRepository), "/services/advies")
   }
   
   override def destroy(context: ServletContext) {

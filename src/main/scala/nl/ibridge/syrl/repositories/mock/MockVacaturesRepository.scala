@@ -1,11 +1,10 @@
 package nl.ibridge.syrl.repositories.mock
 
 import nl.ibridge.syrl.repositories.VacaturesRepository
-
 import nl.ibridge.syrl.model.vacature.Vacature
 import scala.concurrent.Future
-
 import scala.concurrent.ExecutionContext.Implicits.global
+import nl.ibridge.syrl.model.AdviesCriteria
 
 /**
  * @author hv01016
@@ -51,6 +50,8 @@ class MockVacaturesRepository extends VacaturesRepository {
           "Boekhandel LekkerLezen",
           "MBO,HAVO"))
   }
+  
+  def find(criteria: AdviesCriteria): Future[List[Vacature]] = find
       
   override def get(id: Int): Future[Option[Vacature]] = find.map(_.find(_.id == id))
 }

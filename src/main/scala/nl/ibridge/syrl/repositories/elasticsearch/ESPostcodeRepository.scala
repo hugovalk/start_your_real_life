@@ -31,15 +31,8 @@ class ESPostcodeRepository(val client: ElasticClient) extends PostcodeRepository
   }
   
   override def findProvincieForPostcode(postcode: String): Future[String] = client.execute {
-    search in indexName -> typeName query postcode.replaceAll("\\s", "") fields "provincie"
-//    query {
-//      bool {
-//        should {
-//          query("", "")
-////          query("postcodes.waarde", postcode.replaceAll("\\s", ""))
-//        }
-//      }
-//    }
+    search in indexName -> typeName query 
+      postcode.replaceAll("\\s", "") fields "provincie"
   }.map{response => 
     val hits = response.getHits
     if (hits.getTotalHits > 0) {
