@@ -9,12 +9,16 @@
 			$(this).hide(); 
 		});
 		
+		$(this).find("[data-flex-hypotheek]").each(function(){
+			$(this).hide(); 
+		});
+		
 		$(this).find("[data-match]").each(function(){
 			$(this).on('click', function(){
 				
 				$("body").waitMe({
 					effect: 'bounce', 
-					text: 'Een moment a.u.b. We zijn voor nu je perspectief aan het berekenen.',
+					text: 'Een moment a.u.b. We zijn nu voor jou je perspectief aan het berekenen.',
 					bg: 'rgba(255, 255, 255, 0.7)', color: '#000'
 				});
 				
@@ -30,6 +34,7 @@
 						setAdvicedCity(advies);
 						setHuisInformation(advies.huis);
 						setVacatureInformation(advies.vacature);
+						showFlexHypotheekContent(advies.flexHypotheek);
 					}
 				});	
 				
@@ -78,6 +83,16 @@
 	
 	function setAdvicedCity(advies){
 		$(document).find("[data-advice-city]").text(advies.huis.adres.woonPlaats);
+	}
+	
+	function showFlexHypotheekContent(show){
+		if (show) {
+			$(document).find("[data-flex-hypotheek='true']").show();
+			$(document).find("[data-flex-hypotheek='false']").hide();
+		} else {
+			$(document).find("[data-flex-hypotheek='true']").hide();
+			$(document).find("[data-flex-hypotheek='false']").show();
+		}
 	}
 	
 }(jQuery));
