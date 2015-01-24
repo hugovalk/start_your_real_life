@@ -23,7 +23,7 @@
 				});
 				
 				//1. Fetch results based on input
-				var serviceUrl="/services/advies"
+				var serviceUrl="/services/advies";
 					
 				$.ajax({
 					type: "GET", 
