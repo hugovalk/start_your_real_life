@@ -1,5 +1,52 @@
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-  padding: 0 4%; 
+@mixin arrow-next($color){
+	z-index: 100;
+	content:'';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    width: 0;
+    height: 0;
+    border-top: solid 50px $color;
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;	
 }
+
+.row {
+	position: relative;
+  	margin-right: -15px;
+  	margin-left: -15px;
+  	padding: 0 4%; 
+  	
+  	&.step{
+  		z-index: 80;
+		margin-left: -15px; 
+		margin-right: -15px;
+		z-index: 90;
+		position: relative; 
+		padding-top: 60px; 
+		padding-bottom: 40px;
+		
+		min-height: 200px;
+		
+		&.white{
+			background-color: $white;
+			&:after{ @include arrow-next($white); }
+		}
+		
+		&.blue{
+			background-color: $blue;
+			&:after{ @include arrow-next($blue); }
+		}
+		
+		&.grey{
+			background-color: $grey;
+			&:after{ @include arrow-next($grey); }
+		}
+  	
+  	}
+}
+
+
+
+

@@ -34,6 +34,7 @@ header.carousel .fill {
 } 
 
 header:after{
+	z-index: 100;
 	content:'';
     position: absolute;
     top: 100%;
@@ -44,6 +45,4 @@ header:after{
     border-top: solid 50px $blue;
     border-left: solid 50px transparent;
     border-right: solid 50px transparent;	
-    
-
 }
