@@ -37,7 +37,7 @@ class ScalatraBootstrap extends LifeCycle {
     val postcodeRepository = new ESPostcodeRepository(client)
     val vacaturesRepository = new ESVacaturesRepository(client)
     val huizenRepository = new ESHuizenRepository(client)
-    context.mount(new VacaturesServlet(new MockVacaturesRepository), "/services/vacatures")
+    context.mount(new VacaturesServlet(vacaturesRepository), "/services/vacatures")
     context.mount(new HuizenServlet(new MockHuizenRepository), "/services/huizen")
     context.mount(new ImportServlet(postcodeRepository, vacaturesRepository, huizenRepository), "/data/import")
     context.mount(new GeoDataServlet(postcodeRepository), "/services/geodata")

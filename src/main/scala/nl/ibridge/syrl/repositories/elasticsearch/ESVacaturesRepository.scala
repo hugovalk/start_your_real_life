@@ -21,11 +21,19 @@ class ESVacaturesRepository(val client: ElasticClient) extends VacaturesReposito
   }.map(_.isCreated())
   
   def find: Future[List[Vacature]] = client.execute {
-    search in indexName -> typeName
+    search in indexName -> typeName fields(
+        "id", "titel", "samenvatting", "vakgebied", "provincie", "plaats", "salaris")
   }.map { response => 
     response.getHits.getHits.map { 
       hit => 
-        new Vacature(1, "", "", "", "", "", 1)
+        new Vacature(
+            hit.field("id").getValue.asInstanceOf[Int], 
+            hit.field("titel").getValue.toString(), 
+            hit.field("samenvatting").getValue.toString(), 
+            hit.field("vakgebied").getValue.toString(), 
+            hit.field("provincie").getValue.toString(), 
+            hit.field("plaats").getValue.toString(), 
+            hit.field("salaris").getValue.asInstanceOf[Int])
     }.toList
   }
  
@@ -33,7 +41,7 @@ class ESVacaturesRepository(val client: ElasticClient) extends VacaturesReposito
   
   val indexName = "vacatures"
   
-  val typeName = "vacature"
+  val typeName = "vacatures"
   
   val mapping = typeName as {
     "id" typed IntegerType
