@@ -12,9 +12,9 @@ class MockHuizenRepository extends HuizenRepository {
   
   override def find: Future[List[Huis]] = Future {
     List(
-      new Huis(1, Koop, new Adres("Johannes Poststraat 94", "Gouda", "2806 KC")),
-      new Huis(2, Koop, new Adres("Diemermere 25", "Diemen", "1112 TC")),
-      new Huis(3, Koop, new Adres("Lange ademstraat", "Rotterdam", "2894 AB"))
+      new Huis(1, Koop, "200.000 k.k.", 4, "Omschrijving", new Adres("Johannes Poststraat 94", "Gouda", "2806 KC")),
+      new Huis(2, Koop, "200.000 k.k.", 4, "Omschrijving", new Adres("Diemermere 25", "Diemen", "1112 TC")),
+      new Huis(3, Koop, "200.000 k.k.", 4, "Omschrijving", new Adres("Lange ademstraat", "Rotterdam", "2894 AB"))
       )
   }
   
