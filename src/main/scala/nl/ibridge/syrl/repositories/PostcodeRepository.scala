@@ -41,4 +41,8 @@ trait PostcodeRepository {
   
   def find: Future[List[Postcode]]
   
+  def findProvincieForPostcode(postcode: String): Future[String]
+
+  def findProvincies(): Future[List[String]]
+  
 }

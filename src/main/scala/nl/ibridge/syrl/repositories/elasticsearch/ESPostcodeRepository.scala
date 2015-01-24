@@ -8,6 +8,8 @@ import com.sksamuel.elastic4s.mappings.FieldType._
 import scala.concurrent.ExecutionContext.Implicits.global
 import org.elasticsearch.node.Node
 import com.sksamuel.elastic4s.ElasticClient
+import org.elasticsearch.search.facet.terms.TermsFacet
+import scala.collection.JavaConverters._
 
 
 /**
@@ -16,7 +18,7 @@ import com.sksamuel.elastic4s.ElasticClient
 class ESPostcodeRepository(val client: ElasticClient) extends PostcodeRepository with ElasticSearch {
   
   def save(postcode: Postcode): Future[Boolean] = client.execute {
-    index into indexName doc postcode
+    index into indexName -> typeName doc postcode
   }.map(_.isCreated())
   
   def find: Future[List[Postcode]] = client.execute {
@@ -28,9 +30,37 @@ class ESPostcodeRepository(val client: ElasticClient) extends PostcodeRepository
     }.toList
   }
   
+  override def findProvincieForPostcode(postcode: String): Future[String] = client.execute {
+    search in indexName -> typeName query postcode.replaceAll("\\s", "") fields "provincie"
+//    query {
+//      bool {
+//        should {
+//          query("", "")
+////          query("postcodes.waarde", postcode.replaceAll("\\s", ""))
+//        }
+//      }
+//    }
+  }.map{response => 
+    val hit = response.getHits.getAt(0)
+    val field = hit.field("provincie")
+    field.getValue.toString()
+  }
+  
+  override def findProvincies: Future[List[String]] = client.execute {
+    val query = search in indexName -> typeName facets {
+      facet terms "provincie" field "provincie"
+    }
+    println(query.build)
+    query
+  }.map { response => 
+    val facets = response.getFacets
+    println(response)
+    val facet = facets.facet("provincie").asInstanceOf[TermsFacet]
+    facet.getEntries.asScala.toList.asInstanceOf[List[TermsFacet.Entry]].map(_.getTerm.toString())}
+  
   val indexName = "postcodes"
   
-  val typeName = "postcode"
+  val typeName = "postcodes"
   
   val mapping = typeName as {
     "id" typed IntegerType
