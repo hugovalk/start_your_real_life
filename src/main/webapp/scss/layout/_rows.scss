@@ -2,7 +2,7 @@
 	z-index: 100;
 	content:'';
     position: absolute;
-    top: 100%;
+    top: 97%;
     left: 50%;
     margin-left: -50px;
     width: 0;
@@ -23,8 +23,6 @@
   	}
   	
   	&.step{
-  		z-index: 80;
-		z-index: 90;
 		position: relative; 
 		padding-top: 60px; 
 		padding-bottom: 40px;
