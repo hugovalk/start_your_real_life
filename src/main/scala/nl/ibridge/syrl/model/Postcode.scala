@@ -6,4 +6,6 @@ case class Postcode(
     letters: String, 
     provincie: String,
     plaats: String,
-    straat: String)
+    straat: String,
+    latitude: Double,
+    longitude: Double)

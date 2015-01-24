@@ -22,7 +22,16 @@ trait PostcodeRepository {
   def importFile(inputStream: InputStream): Future[Boolean] = {
     val reader = CSVReader.open(new InputStreamReader(inputStream))
     val results = reader.toStream().map{ line =>
-      val postcode = new Postcode(line(1), line(3).toInt, line(4), line(13), line(9), line(8))
+      val postcode = new Postcode(
+          line(1), 
+          line(3).toInt, 
+          line(4), 
+          line(13), 
+          line(9), 
+          line(8),
+          line(15).toDouble,
+          line(16).toDouble)
+      Thread.sleep(10)
       save(postcode)
     }
     Future.reduce(results)((a,b)=> a && b)
@@ -30,6 +39,6 @@ trait PostcodeRepository {
   
   def save(postcode: Postcode): Future[Boolean]
   
-  def find: List[Postcode]
+  def find: Future[List[Postcode]]
   
 }

@@ -1,6 +1,8 @@
 package nl.ibridge.syrl.repositories.mock
 
 import nl.ibridge.syrl.CustomFlatSpec
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
 
 /**
  * @author hv01016
@@ -8,11 +10,11 @@ import nl.ibridge.syrl.CustomFlatSpec
 class HuizenMockRepositorySpecs extends CustomFlatSpec {
   
   "The mock huizenrepository" should "contain 3 huizen" in {
-    new MockHuizenRepository().find.size should be(3)
+    Await.result(new MockHuizenRepository().find, Duration("3 s")).size should be(3)
   }
   
   it should "be able to find a huis by id" in {
-    new MockHuizenRepository().get(2).get.id should be (2)
+    Await.result(new MockHuizenRepository().get(2), Duration("3 s")).get.id should be (2)
   }
   
 }

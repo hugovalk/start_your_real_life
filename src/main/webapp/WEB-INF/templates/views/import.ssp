@@ -2,8 +2,24 @@
 
 <section>
 	<h2>Postcodes importeren</h1>
+	<a href="/data/import/postcodes/createindex">Create postcode index</a>
+	<a href="/data/import/postcodes/deleteindex">Delete postcode index</a>
 	<form enctype="multipart/form-data" method="post">
 		<input type="file" name="postcodeFile"></input>
 		<input type="submit" name="importeren" value="importeren"></input>
 	</form>
+</section>
+
+<section>
+	<h2>Vacatures importeren</h1>
+	<a href="/data/import/vacatures/createindex">Create vacatures index</a>
+	<a href="/data/import/vacatures/deleteindex">Delete vacatures index</a>
+
+</section>
+
+<section>
+	<h2>Huizen importeren</h1>
+	<a href="/data/import/huizen/createindex">Create huizen index</a>
+	<a href="/data/import/huizen/deleteindex">Delete huizen index</a>
+
 </section>

@@ -19,5 +19,5 @@ class MockPostcodeRepository extends PostcodeRepository {
     }
   }
   
-  override def find: List[Postcode] = repo
+  override def find: Future[List[Postcode]] = Future{repo}
 }
